@@ -269,31 +269,45 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # -------------------------------------------------------------
-# الخاتمة والتوصيات والتواقيع الاحترافية (نسخة معدلة وموزونة تماماً)
+# الخاتمة والتوصيات والتواقيع الاحترافية (الحل القاطع باستخدام أعمدة Streamlit)
 # -------------------------------------------------------------
 st.markdown("<h2 class='section-title'>الخاتمة والتوصيات:</h2>", unsafe_allow_html=True)
+
+# كرت الخاتمة مع فرض اتجاه النص والمحاذاة التامة جهة اليمين والمنتصف
 st.markdown("""
-<div class='luxury-card' style='border-right-color: #C5A059; text-align: right !important; direction: rtl !important;'>
-    <p style='text-align: right !important; direction: rtl !important;'>إن هذه الخطة الثقافية الشاملة بمساراتها الواضحة ومستهدفاتها المدروسة وآليات تنفيذها الملموسة وبروتوكول استدامتها الإدارية، تمثل الركيزة الأساسية واللبنة الأولى لصياغة مستقبل جالية نموذجية متلاحمة، ورائدة.</p>
-    <p style='text-align: right !important; direction: rtl !important;'>نضع هذا المشروع الهيكلي والمرجعي أمام سعادتكم للتفضل بالاطلاع والمناقشة، توطئة لإجازته واعتماده لبدء التنفيذ الميداني الفوري وحفظه كارث تنظيمي دائم.</p>
-    <p style='text-align: center !important; font-weight: bold; margin-top: 20px; direction: rtl !important;'>سائلين الله العلي القدير أن يوفقنا جميعاً لما فيه خير العباد والبلاد</p>
-    <p style='text-align: center !important; font-weight: bold; color: #C5A059; margin-top: 10px; direction: rtl !important;'>،، وتفضلوا بقبول وافر الشكر والتقدير والامتنان ،،</p>
+<div class='luxury-card' style='border-right-color: #C5A059; text-align: right !important; direction: rtl !important; width: 100%;'>
+    <p style='text-align: right !important; direction: rtl !important; font-size: 16px; line-height: 1.8;'>إن هذه الخطة الثقافية الشاملة بمساراتها الواضحة ومستهدفاتها المدروسة وآليات تنفيذها الملموسة وبروتوكول استدامتها الإدارية، تمثل الركيزة الأساسية واللبنة الأولى لصياغة مستقبل جالية نموذجية متلاحمة، ورائدة.</p>
+    <p style='text-align: right !important; direction: rtl !important; font-size: 16px; line-height: 1.8;'>نضع هذا مشروع الهيكلي والمرجعي أمام سعادتكم للتفضل بالاطلاع والمناقشة، توطئة لإجازته واعتماده لبدء التنفيذ الميداني الفوري وحفظه كارث تنظيمي دائم.</p>
+    <br>
+    <p style='text-align: center !important; font-weight: bold; font-size: 18px; color: #1A365D; width: 100%;'>سائلين الله العلي القدير أن يوفقنا جميعاً لما فيه خير العباد والبلاد</p>
+    <p style='text-align: center !important; font-weight: bold; font-size: 18px; color: #C5A059; width: 100%;'>،، وتفضلوا بقبول وافر الشكر والتقدير والامتنان ،،</p>
 </div>
+""", unsafe_allow_html=True)
 
-<!-- قسم التواقيع المطور بنظام الفليكس الممركز بالكامل لمنع التشتت -->
-<div style="width: 100%; text-align: center !important; margin-top: 50px; margin-bottom: 40px; direction: rtl !important;">
-    <p style="font-size: 22px !important; font-weight: 800 !important; color: #1A365D !important; margin-bottom: 35px !important; text-align: center !important;">أمانة الثقافة بلجنة تسيير الجالية السودانية بجدة</p>
+# إنشاء حاوية معزولة للتواقيع لكسر أي مظهر مائل لليسار
+with st.container():
+    st.markdown("<br>", unsafe_allow_html=True)
     
-    <div style="display: flex; justify-content: center; gap: 150px; align-items: center; max-width: 600px; margin: 0 auto !important;">
-        <div style="text-align: center !important; flex: 1;">
-            <p style="font-size: 26px !important; font-weight: 800 !important; color: #C5A059 !important; margin: 0 !important; white-space: nowrap;">وليد البليل</p>
-        </div>
-        <div style="text-align: center !important; flex: 1;">
-            <p style="font-size: 26px !important; font-weight: 800 !important; color: #C5A059 !important; margin: 0 !important; white-space: nowrap;">بابكر عبد الله</p>
-        </div>
-    </div>
-</div>
+    # عنوان قسم التواقيع ممركز في منتصف الشاشة تماماً
+    st.markdown("<h3 style='text-align: center !important; font-weight: 800; color: #1A365D; font-size: 22px; margin-bottom: 30px; width: 100%; direction: rtl;'>أمانة الثقافة بلجنة تسيير الجالية السودانية بجدة</h3>", unsafe_allow_html=True)
+    
+    # تقسيم منطقة التواقيع إلى 3 أعمدة (العمود الأوسط فارغ لعمل مسافة عادلة وموزونة)
+    col1, col2, col3 = st.columns([2, 1, 2])
+    
+    with col1:
+        # التوقيع الأول (يمين)
+        st.markdown("<p style='text-align: center !important; font-size: 26px !important; font-weight: 800 !important; color: #C5A059 !important; margin: 0 !important; white-space: nowrap;'>وليد البليل</p>", unsafe_allow_html=True)
+        
+    with col2:
+        # عمود فارغ في المنتصف لخلق التوازن وعمل Gap ثابت ومحمي
+        st.write("")
+        
+    with col3:
+        # التوقيع الثاني (يسار)
+        st.markdown("<p style='text-align: center !important; font-size: 26px !important; font-weight: 800 !important; color: #C5A059 !important; margin: 0 !important; white-space: nowrap;'>بابكر عبد الله</p>", unsafe_allow_html=True)
 
-<br><hr>
-<p style='text-align: center !important; color: #64748B; font-size: 13px; margin-top: 20px;'>أمانة الثقافة بلجنة تسيير الجالية السودانية بجدة • مايو 2026م</p>
+# تذييل الصفحة النهائي الموحد
+st.markdown("""
+<br><br><hr>
+<p style='text-align: center !important; color: #64748B; font-size: 13px; margin-top: 15px; width: 100%;'>أمانة الثقافة بلجنة تسيير الجالية السودانية بجدة • مايو 2026م</p>
 """, unsafe_allow_html=True)
