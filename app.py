@@ -269,28 +269,45 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # -------------------------------------------------------------
-# الخاتمة والتوصيات والتواقيع الاحترافية
+# الخاتمة والتوصيات والتواقيع الاحترافية (الحل المعزول والقاطع)
 # -------------------------------------------------------------
 st.markdown("<h2 class='section-title'>الخاتمة والتوصيات:</h2>", unsafe_allow_html=True)
-st.markdown("""
-<div class='luxury-card' style='border-right-color: #C5A059;'>
-    <p>إن هذه الخطة الثقافية الشاملة بمساراتها الواضحة ومستهدفاتها المدروسة وآليات تنفيذها الملموسة وبروتوكول استدامتها الإدارية، تمثل الركيزة الأساسية واللبنة الأولى لصياغة مستقبل جالية نموذجية متلاحمة، ورائدة.</p>
-    <p>نضع هذا المشروع الهيكلي والمرجعي أمام سعادتكم للتفضل بالاطلاع والمناقشة، توطئة لإجازته واعتماده لبدء التنفيذ الميداني الفوري وحفظه كارث تنظيمي دائم.</p>
-    <p style='text-align: center !important; font-weight: bold;'>سائلين الله العلي القدير أن يوفقنا جميعاً لما فيه خير العباد والبلاد</p>
-    <p style='text-align: center !important; font-weight: bold; color: #C5A059;'>،، وتفضلوا بقبول وافر الشكر والتقدير والامتنان ،،</p>
-</div>
 
-<!-- قسم التواقيع ممركز ومكبر تماماً باللون الذهبي -->
-<div class='signature-section'>
-    <p style='font-size: 24px !important; font-weight: bold !important; color: #1A365D !important; text-align: center !important;'>أمانة الثقافة بلجنة تسيير الجالية السودانية بجدة</p>
+# كرت الخاتمة الرسمي
+st.markdown("""
+<div class='luxury-card' style='border-right-color: #C5A059; text-align: right !important; direction: rtl !important;'>
+    <p style='font-size: 16px; line-height: 1.8; text-align: right !important;'>إن هذه الخطة الثقافية الشاملة بمساراتها الواضحة ومستهدفاتها المدروسة وآليات تنفيذها الملموسة وبروتوكول استدامتها الإدارية، تمثل الركيزة الأساسية واللبنة الأولى لصياغة مستقبل جالية نموذجية متلاحمة، ورائدة.</p>
+    <p style='font-size: 16px; line-height: 1.8; text-align: right !important;'>نضع هذا المشروع الهيكلي والمرجعي أمام سعادتكم للتفضل بالاطلاع والمناقشة، توطئة لإجازته واعتماده لبدء التنفيذ الميداني الفوري وحفظه كارث تنظيمي دائم.</p>
     <br>
-    <table class='signature-table'>
+    <p style='text-align: center !important; font-weight: bold; font-size: 18px; color: #1A365D;'>سائلين الله العلي القدير أن يوفقنا جميعاً لما فيه خير العباد والبلاد</p>
+    <p style='text-align: center !important; font-weight: bold; font-size: 18px; color: #C5A059;'>،، وتفضلوا بقبول وافر الشكر والتقدير والامتنان ،،</p>
+</div>
+""", unsafe_allow_html=True)
+
+
+# كتل التواقيع المعزولة تماماً داخل إطار مستقل لمنع التشتت والهروب لليسار
+html_signatures = """
+<div style="font-family: 'Cairo', sans-serif; direction: rtl; text-align: center; width: 100%; padding-top: 20px;">
+    
+    <!-- عنوان التواقيع ممركز تماماً -->
+    <p style="font-size: 22px; font-weight: 800; color: #1A365D; margin-bottom: 40px;">أمانة الثقافة بلجنة تسيير الجالية السودانية بجدة</p>
+    
+    <!-- جدول شفاف ومحكم لتوزيع الأسماء في المنتصف تماماً وبشكل متوازن -->
+    <table style="width: 80%; margin: 0 auto; border: none; border-collapse: collapse;">
         <tr>
-            <td style='font-size: 28px !important; font-weight: 800 !important; color: #C5A059 !important; width: 50%; text-align: center;'>وليد البليل</td>
-            <td style='font-size: 28px !important; font-weight: 800 !important; color: #C5A059 !important; width: 50%; text-align: center;'>بابكر عبد الله</td>
+            <td style="width: 50%; text-align: center; border: none; padding: 10px;">
+                <p style="font-size: 26px; font-weight: 800; color: #C5A059; margin: 0; white-space: nowrap;">وليد البليل</p>
+            </td>
+            <td style="width: 50%; text-align: center; border: none; padding: 10px;">
+                <p style="font-size: 26px; font-weight: 800; color: #C5A059; margin: 0; white-space: nowrap;">بابكر عبد الله</p>
+            </td>
         </tr>
     </table>
+    
+    <br><br><hr style="border: 0; border-top: 1px solid #E2E8F0; width: 90%; margin: 0 auto;">
+    <p style="text-align: center; color: #64748B; font-size: 13px; margin-top: 15px;">أمانة الثقافة بلجنة تسيير الجالية السودانية بجدة • مايو 2026م</p>
 </div>
+"""
 
-<br><hr><p style='text-align: center !important; color: #64748B; font-size: 13px;'>أمانة الثقافة بلجنة تسيير الجالية السودانية بجدة • مايو 2026م</p>
-""", unsafe_allow_html=True)
+# عرض التواقيع داخل حاوية HTML مخصصة ومحايدة لمنع تدخل Streamlit
+st.components.v1.html(html_signatures, height=220, scrolling=False)
