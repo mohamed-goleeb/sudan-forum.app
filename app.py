@@ -119,8 +119,6 @@ st.markdown("""
 # 3. ديباجة الرسالة والمستهدفات العامة
 st.markdown("""
 <div class='main-header'>
-    <p>بسم الله الرحمن الرحيم</p>
-    <p>المملكة العربية السعودية - جدة</p>
     <p>لجنة تسيير الجالية السودانية بجدة</p>
     <h1>الأمانة الثقافية</h1>
     <p>التاريخ : مايو 2026م</p>
@@ -299,7 +297,7 @@ html_signatures = """
                 <p style="font-size: 26px; font-weight: 800; color: #C5A059; margin: 0; white-space: nowrap;">وليد البليل</p>
             </td>
             <td style="width: 50%; text-align: center; border: none; padding: 10px;">
-                <p style="font-size: 26px; font-weight: 800; color: #C5A059; margin: 0; white-space: nowrap;">بابكر عبد الله</p>
+                <p style="font-size: 26px; font-weight: 800; color: #C5A059; margin: 0; white-space: nowrap;">بابكر عبد الله الصلوعابي</p>
             </td>
         </tr>
     </table>
