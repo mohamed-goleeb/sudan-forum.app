@@ -291,7 +291,7 @@ html_signatures = """
     <p style="font-size: 22px; font-weight: 800; color: #1A365D; margin-bottom: 40px;">أمانة الثقافة بلجنة تسيير الجالية السودانية بجدة مايو 2026م</p>
     
     <!-- جدول شفاف ومحكم لتوزيع الأسماء في المنتصف تماماً وبشكل متوازن -->
-    <table style="width: 30%; margin: 0 auto; border: none; border-collapse: collapse;">
+    <table style="width: 25%; margin: 0 auto; border: none; border-collapse: collapse;">
         <tr>
             <td style="width: 50%; text-align: center; border: none; padding: 10px;">
                 <p style="font-size: 26px; font-weight: 800; color: #C5A059; margin: 0; white-space: nowrap;">بابكر عبد الله الصلوعابي</p>
