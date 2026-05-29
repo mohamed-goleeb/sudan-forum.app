@@ -25,6 +25,7 @@ st.markdown("""
         direction: rtl !important;
     }
     
+    /* الهيدر العلوي الموحد مع تكبير جميع النصوص داخله بالتساوي */
     .main-header {
         background: linear-gradient(135deg, #1A365D 0%, #0F1E36 100%);
         padding: 30px;
@@ -32,6 +33,14 @@ st.markdown("""
         color: white !important;
         margin-bottom: 30px;
         border-right: 6px solid #C5A059;
+    }
+    .main-header p, .main-header h1 {
+        color: white !important;
+        font-size: 28px !important;
+        font-weight: 800 !important;
+        margin: 12px 0 !important;
+        line-height: 1.6 !important;
+        text-align: right !important;
     }
     
     .luxury-card {
@@ -87,17 +96,40 @@ st.markdown("""
     .custom-table tr:nth-child(even) td {
         background-color: #F8FAFC;
     }
+    
+    /* تنسيق التواقيع والأسماء في المنتصف بشكل مكبر وفخم */
+    .signature-section {
+        text-align: center !important;
+        margin-top: 40px;
+        margin-bottom: 20px;
+        width: 100%;
+    }
+    .signature-section p {
+        text-align: center !important;
+        margin: 8px 0 !important;
+    }
+    .signature-title {
+        font-size: 22px !important;
+        font-weight: bold !important;
+        color: #1A365D !important;
+    }
+    .signature-names {
+        font-size: 24px !important;
+        font-weight: 800 !important;
+        color: #C5A059 !important;
+        word-spacing: 15px;
+    }
     </style>
     """, unsafe_allow_html=True)
 
-# 3. ديباجة الرسالة والمستهدفات العامة كما هي في الملف
+# 3. ديباجة الرسالة والمستهدفات العامة كما هي في الملف مع التكبير الموحد للهيدر
 st.markdown("""
 <div class='main-header'>
-    <p style='margin: 0; font-size: 16px; color: #C5A059; font-weight: bold;'>بسم الله الرحمن الرحيم</p>
-    <p style='margin: 0; font-size: 14px; color: #CBD5E1;'>المملكة العربية السعودية - جدة</p>
-    <p style='margin: 0; font-size: 14px; color: #CBD5E1;'>لجنة تسيير الجالية السودانية بجدة</p>
-    <h1 style='color: white !important; font-size: 28px !important; margin: 10px 0;'>الأمانة الثقافية</h1>
-    <p style='margin: 0; font-size: 14px; color: #CBD5E1;'>التاريخ : مايو 2026م</p>
+    <p>بسم الله الرحمن الرحيم</p>
+    <p>المملكة العربية السعودية - جدة</p>
+    <p>لجنة تسيير الجالية السودانية بجدة</p>
+    <h1>الأمانة الثقافية</h1>
+    <p style='color: #CBD5E1 !important;'>التاريخ : مايو 2026م</p>
 </div>
 
 <div class='luxury-card' style='border-right-color: #C5A059;'>
@@ -255,7 +287,7 @@ st.markdown("""
 st.markdown("<h2 class='section-title'>الفصل 8: الشراكات والتعاونيات والرعايات</h2>", unsafe_allow_html=True)
 st.markdown("""
 <div class='luxury-card'>
-    <p>• بناء وتطوير برامج توأمة وشراكات تعاونية مع المؤسسات والروابط الثقافية المحلية، وجذب الرعاة والداعمين لدعم استدامة الأنشطة مالياً ومؤسسياً.</p>
+    <p>• بناء وتطوير برامج توأمة وشراكات تعاونية مع المؤسسات والروابط الثثاليفية المحلية، وجذب الرعاة والداعمين لدعم استدامة الأنشطة مالياً ومؤسسياً.</p>
 </div>
 """, unsafe_allow_html=True)
 
@@ -304,7 +336,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # -------------------------------------------------------------
-# الخاتمة والتوصيات
+# الخاتمة والتوصيات والتواقيع المكبرة في المنتصف بالظبط
 # -------------------------------------------------------------
 st.markdown("<h2 class='section-title'>الخاتمة والتوصيات:</h2>", unsafe_allow_html=True)
 st.markdown("""
@@ -315,8 +347,11 @@ st.markdown("""
     <p style='text-align: center !important; font-weight: bold; color: #C5A059;'>،، وتفضلوا بقبول وافر الشكر والتقدير والامتنان ،،</p>
 </div>
 
-<div style='text-align: center !important; margin-top: 30px;'>
-    <p style='margin: 0; font-weight: bold;'>أمانة الثقافة بلجنة تسيير الجالية السودانية بجدة</p>
-    <p style='margin: 5px 0; font-weight: bold; color: #C5A059;'>بابكر عبد الله &nbsp;&nbsp;&nbsp;&nbsp; وليد البليل</p>
+<!-- قسم التواقيع ممركز ومكبر تماماً -->
+<div class='signature-section'>
+    <p class='signature-title'>أمانة الثقافة بلجنة تسيير الجالية السودانية بجدة</p>
+    <p class='signature-names'>بابكر عبد الله &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; وليد البليل</p>
 </div>
+
+<br><hr><p style='text-align: center !important; color: #64748B; font-size: 13px;'>أمانة الثقافة بلجنة تسيير الجالية السودانية بجدة • مايو 2026م</p>
 """, unsafe_allow_html=True)
