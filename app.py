@@ -1,63 +1,44 @@
 import streamlit as st
 
-# ضبط إعدادات الصفحة الافتراضية
-st.set_page_config(page_title="الخطة الثقافية الشاملة - ملتقى السودان", page_icon="📋", layout="wide")
+# ضبط إعدادات الصفحة
+st.set_page_config(page_title="لجنة تسيير الجالية السودانية بجدة", page_icon="📋", layout="wide")
 
-# حقن التنسيقات العامة والهوية البصرية الموحدة (Premium Aesthetic)
+# التنسيق النظيف الموحد لمنع تشتت التواقيع أو زحفها لليسار
 st.markdown("""
 <style>
-    @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap');
     
     * {
         font-family: 'Cairo', sans-serif !important;
-    }
-    
-    .report-container {
         direction: rtl !important;
         text-align: right !important;
+    }
+    
+    .main-container {
         padding: 20px;
+        max-width: 1200px;
+        margin: 0 auto;
     }
     
-    .section-title {
-        color: #1A365D;
-        border-right: 5px solid #C5A059;
-        padding-right: 15px;
-        margin-top: 35px;
-        margin-bottom: 20px;
-        font-weight: 700;
-    }
-    
-    .luxury-card {
-        background-color: #FFFFFF;
-        border: 1px solid #E2E8F0;
-        border-right: 6px solid #1A365D;
-        padding: 25px;
-        border-radius: 10px;
-        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-        margin-bottom: 20px;
-        direction: rtl !important;
-        text-align: right !important;
-    }
-    
-    /* تنسيق الفهرس الاحترافي */
+    /* تنسيق الفهرس ليطابق شكل الجداول الاحترافية */
     .index-table {
         width: 100%;
         border-collapse: collapse;
         margin: 20px 0;
-        direction: rtl !important;
-        text-align: right !important;
     }
     .index-table th {
         background-color: #1A365D;
-        color: white;
+        color: white !important;
         padding: 12px;
         font-weight: 700;
         border: 1px solid #E2E8F0;
+        text-align: right !important;
     }
     .index-table td {
         padding: 12px;
         border: 1px solid #E2E8F0;
         color: #334155;
+        text-align: right !important;
     }
     .index-table tr:nth-child(even) {
         background-color: #F8FAFC;
@@ -65,52 +46,40 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-# فتح الحاوية الرئيسية للتقرير
-st.markdown("<div class='report-container'>", unsafe_allow_html=True)
+# فتح الحاوية الرئيسية
+st.markdown("<div class='main-container'>", unsafe_allow_html=True)
 
-# -------------------------------------------------------------
-# تمهيد الخطاب الرسمي (نفس النص المحدث بدون أي تعديل)
-# -------------------------------------------------------------
+# --- ترويسة الخطاب وديباجة الرسالة ---
 st.markdown("""
-<div style="width: 100%; background-color: #FFFFFF; border: 1px solid #E2E8F0; padding: 30px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.03); direction: rtl !important; text-align: right !important;">
-    <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 30px;">
-        <div style="text-align: right;">
-            <h3 style="margin: 0; color: #1A365D; font-weight: 800; font-size: 20px;">لجنة تسيير الجالية</h3>
-            <h3 style="margin: 5px 0 0 0; color: #1A365D; font-weight: 800; font-size: 20px;">السودانية بجدة</h3>
-            <p style="margin: 5px 0 0 0; color: #C5A059; font-weight: 700; font-size: 16px;">الأمانة الثقافية</p>
-        </div>
-        <div style="text-align: left;">
-            <p style="margin: 0; color: #64748B; font-weight: 600; font-size: 15px;">التاريخ : مايو 2026م</p>
-        </div>
-    </div>
-    
-    <br>
-    <h3 style="color: #1A365D; font-weight: 800; margin-bottom: 5px;">سعادة رئيس وأعضاء لجنة تسيير الجالية السودانية بجدة <span style="float: left; color: #1A365D; font-weight: 800;">الموقرين</span></h3>
-    <br><br>
-    <p style="font-weight: 700; font-size: 17px; color: #1A365D; margin-bottom: 20px;">السلام عليكم ورحمة الله وبركاته</p>
-    
-    <p style="font-size: 16px; line-height: 1.8; color: #334155; text-justify: inter-word; margin-bottom: 15px;">إيماناً بالدور الطليعي المحوري الذي تلعبه الثقافة في تعزيز التماسك المجتمعي وبناء جسور التواصل المعرفي بين أبناء الوطن في المهجر وتماشياً مع الرؤية التطويرية للأمانة الثقافية يسرنا أن نضع بين أيديكم الخطة الثقافية الشاملة .</p>
-    
-    <p style="font-size: 16px; line-height: 1.8; color: #334155; text-justify: inter-word; margin-bottom: 35px;">إن القيمة التنظيمية العليا لهذه الخطة تكمن في كونها إطاراً مرجعياً مستداماً وبنية تحتية مؤسسية حيث تم تصميمها وهندستها لتكون دليلاً حاكماً وأصلاً من أصول العمل العام التي تنتقل تلقائياً لشرعنة واستدامة الحراك الثقافي لأي مجالس إدارية أو جاليات منتخبة قادمة، صوناً للمكتسبات المعرفية وضماناً لتراكم الخبرات وتواصل الأجيال دون انقطاع .</p>
-    
-    <div style="text-align: center; margin: 40px 0;">
-        <p style="font-size: 16px; color: #64748B; margin-bottom: 5px; font-weight: 600;">تحت شعار</p>
-        <h2 style="color: #C5A059; font-weight: 800; font-size: 32px; margin: 0;">الثقافة تجمعنا</h2>
-    </div>
+<div style="width: 100%; margin-bottom: 20px;">
+    <p style="margin: 0; font-weight: bold; font-size: 18px; color: #1A365D;">لجنة تسيير الجالية<br>السودانية بجدة<br>الأمانة الثقافية</p>
+    <p style="margin-top: 5px; color: #64748B;">التاريخ : مايو 2026م</p>
+</div>
+
+<br>
+<p style="font-weight: bold; font-size: 18px; color: #1A365D; margin-bottom: 5px;">سعادة رئيس وأعضاء لجنة تسيير الجالية السودانية بجدة <span style="float: left; font-weight: bold;">الموقرين</span></p>
+<p style="font-weight: bold; font-size: 16px; margin-top: 15px; margin-bottom: 15px;">السلام عليكم ورحمة الله وبركاته</p>
+
+<p style="font-size: 16px; line-height: 1.8; margin-bottom: 15px;">إيماناً بالدور الطليعي المحوري الذي تلعبه الثقافة في تعزيز التماسك المجتمع وبناء جسور التواصل المعرفي بين أبناء الوطن في المهجر وتماشياً مع الرؤية التطويرية للأمانة الثقافية يسرنا أن نضع بين أيديكم الخطة الثقافية الشاملة .</p>
+
+<p style="font-size: 16px; line-height: 1.8; margin-bottom: 30px;">إن القيمة التنظيمية العليا لهذه الخطة تكمن في كونها إطاراً مرجعياً مستداماً وبنية تحتية مؤسسية حيث تم تصميمها وهندستها لتكون دليلاً حاكماً وأصلاً من أصول العمل العام التي تنتقل تلقائياً لشرعنة واستدامة الحراك الثقافي لأي مجالس إدارية أو جاليات منتخبة قادمة، صوناً للمكتسبات المعرفية وضماناً لتراكم الخبرات وتواصل الأجيال دون انقطاع .</p>
+
+<div style="text-align: center !important; width: 100%; margin: 30px 0;">
+    <p style="text-align: center !important; font-size: 16px; color: #64748B; margin-bottom: 5px;">تحت شعار</p>
+    <p style="text-align: center !important; color: #C5A059; font-weight: 800; font-size: 28px; margin: 0;">الثقافة تجمعنا</p>
 </div>
 """, unsafe_allow_html=True)
 
-# -------------------------------------------------------------
-# 📋 الفهرس الهيكلي
-# -------------------------------------------------------------
-st.markdown("<h2 class='section-title'>📋 الفهرس</h2>", unsafe_allow_html=True)
+
+# --- 📋 الفهرس الجدول المحدث ---
+st.markdown("### 📋 الفهرس", unsafe_allow_html=True)
 st.markdown("""
 <table class='index-table'>
     <thead>
         <tr>
-            <th style="width: 20%;">رقم القسم / الفصل</th>
-            <th style="width: 35%;">عنوان المكون الهيكلي</th>
-            <th style="width: 45%;">المحتوى</th>
+            <th>رقم القسم / الفصل</th>
+            <th>عنوان المكون الهيكلي</th>
+            <th>المحتوى</th>
         </tr>
     </thead>
     <tbody>
@@ -183,177 +152,113 @@ st.markdown("""
 </table>
 """, unsafe_allow_html=True)
 
-# -------------------------------------------------------------
-# الهيكل التفصيلي للخطة الشاملة
-# -------------------------------------------------------------
-st.markdown("<br><h2 style='color: #1A365D; font-weight: 800; border-bottom: 2px solid #1A365D; padding-bottom: 10px;'>الهيكل التفصيلي للخطة الشاملة :</h2>", unsafe_allow_html=True)
 
-# الفصل 1
-st.markdown("<h2 class='section-title'>الفصل 1: الملخص التنفيذي</h2>", unsafe_allow_html=True)
-st.markdown("""
-<div class='luxury-card'>
-    <p style='font-size: 16px; line-height: 1.8; margin-bottom: 12px;'>يقدم عرضاً شاملاً ومكثفاً للخطة الثقافية، مبرراتها وأثرها التنموي المتوقع يركز الفصل على هندسة إطار مؤسسي عملي ومرن وقابل للتنفيذ الميداني الفوري مع التركيز على استخراج مخرجات ونتائج نوعية وكمية قابلة للقياس والتقييم.</p>
-    <p style='font-size: 16px; line-height: 1.8;'>يستند هذا الإطار على مبادئ التنوع والشمولية والاستدامة مبيناً الأدوارالتنفيذية آليات المتابعة والشراكات المستهدفة ومؤشرات النجاح الرئيسية لضمان تحقيق الأثر بعيد المدى .</p>
-</div>
-""", unsafe_allow_html=True)
+# --- الهيكل التفصيلي للخطة الشاملة ---
+st.markdown("### الهيكل التفصيلي للخطة الشاملة :", unsafe_allow_html=True)
 
-# الفصل 2
-st.markdown("<h2 class='section-title'>الفصل 2: الخلفية الخاصة بالخطة</h2>", unsafe_allow_html=True)
 st.markdown("""
-<div class='luxury-card'>
-    <p style='font-size: 16px; line-height: 1.8;'>تأصيل دور الثقافة كركيزة أساسية لا غنى عنها في تعزيز التماسك والتعايش المجتمعي بين مكونات الجالية في المهجر مع التركيز على صياغة بنية تحتية إدارية وثقافية تدعم هذا التوجه إجرائياً وعملياً.</p>
-</div>
-""", unsafe_allow_html=True)
+<p style="font-size: 16px; font-weight: bold; margin-top: 20px; color: #1A365D;">الفصل 1: الملخص التنفيذي</p>
+<p style="font-size: 15px; line-height: 1.8; margin-right: 15px;">يقدم عرضاً شاملاً ومكثفاً للخطة الثقافية، مبرراتها وأثرها التنموي المتوقع يركز الفصل على هندسة إطار مؤسسي عملي ومرن وقابل للتنفيذ الميداني الفوري مع التركيز على استخراج مخرجات ونتائج نوعية وكمية قابلة للقياس والتقييم.</p>
+<p style="font-size: 15px; line-height: 1.8; margin-right: 15px;">يستند هذا الإطار على مبادئ التنوع والشمولية والاستدامة مبيناً الأدوارالتنفيذية آليات المتابعة والشراكات المستهدفة ومؤشرات النجاح الرئيسية لضمان تحقيق الأثر بعيد المدى .</p>
 
-# الفصل 3
-st.markdown("<h2 class='section-title'>الفصل 3: تحليل الواقع الثقافي</h2>", unsafe_allow_html=True)
-st.markdown("""
-<div class='luxury-card'>
-    <p style='font-size: 16px; line-height: 1.8;'>دراسة وصفية وميدانية دقيقة للوضع الراهن للحراك الثقافي في المنطقة الغربية واستكشاف مكامن الفرص غير المستغلة والوقوف على التحديات الراهنة التي تواجه العمل العام وتذليلها .</p>
-</div>
-""", unsafe_allow_html=True)
+<p style="font-size: 16px; font-weight: bold; margin-top: 20px; color: #1A365D;">الفصل 2: الخلفية الخاصة بالخطة</p>
+<p style="font-size: 15px; line-height: 1.8; margin-right: 15px;">تأصيل دور الثقافة كركيزة أساسية لا غنى عنها في تعزيز التماسك والتعايش المجتمعي بين مكونات الجالية في المهجر مع التركيز على صياغة بنية تحتية إدارية وثقافية تدعم هذا التوجه إجرائياً وعملياً.</p>
 
-# الفصل 4
-st.markdown("<h2 class='section-title'>الفصل 4: تحليل (SWOT) الرباعي</h2>", unsafe_allow_html=True)
-st.markdown("""
-<div class='luxury-card'>
-    <p style='font-size: 16px; line-height: 1.8;'>قراءة علمية تحليلية لواقع العمل الثقافي تحدد بشكل صارم : نقاط القوة لتنميتها، نقاط الضعف لمعالجتها وحوكمتها، الفرص المتاحة لانتهازها، والمهددات الخارجية للتحوط منها وتجنبها .</p>
-</div>
-""", unsafe_allow_html=True)
+<p style="font-size: 16px; font-weight: bold; margin-top: 20px; color: #1A365D;">الفصل 3: تحليل الواقع الثقافي</p>
+<p style="font-size: 15px; line-height: 1.8; margin-right: 15px;">دراسة وصفية وميدانية دقيقة للوضع الراهن للحراك الثقافي في المنطقة الغربية واستكشاف مكامن الفرص غير المستغلة والوقوف على التحديات الراهنة التي تواجه العمل العام وتذليلها .</p>
 
-# الفصل 5
-st.markdown("<h2 class='section-title'>الفصل 5: الرؤية والرسالة والقيم</h2>", unsafe_allow_html=True)
-st.markdown("""
-<div class='luxury-card'>
-    <p style='font-size: 16px; line-height: 1.8;'>صياغة الإطار الفلسفي والمرجعي الحاكم للعمل الثقافي بالأمانة الثقافية بما يضمن التزام كافة اللجان والروابط بهوية بصرية موحدة تعبرعن الوجدان الثقافي السوداني الأصيل .</p>
-</div>
-""", unsafe_allow_html=True)
+<p style="font-size: 16px; font-weight: bold; margin-top: 20px; color: #1A365D;">الفصل 4: تحليل (SWOT) الرباعي</p>
+<p style="font-size: 15px; line-height: 1.8; margin-right: 15px;">قراءة علمية تحليلية لواقع العمل الثقافي تحدد بشكل صارم : نقاط القوة لتنميتها، نقاط الضعف لمعالجتها وحوكمتها، الفرص المتاحة لانتهازها، والمهددات الخارجية للتحوط منها وتجنبها .</p>
 
-# الفصل 6
-st.markdown("<h2 class='section-title'>الفصل 6: الركائز التوجيهية الست ومساراتها التنفيذية</h2>", unsafe_allow_html=True)
-st.markdown("""
-<div class='luxury-card'>
-    <p style='font-size: 16px; line-height: 1.8; font-weight: 600; color: #1A365D; margin-bottom: 20px;'>يمثل هذا الفصل العصب العملي للخطة حيث يحدد الأعمدة الستة التي يستند عليها البناء الهيكلي (الهوية، المعرفة – الإبداع – الشباب – الشراكات - التحول الرقمي) ويترجمها مباشرة إلى محاور ومسارات تطبيقية على أرض الواقع كالتالي:</p>
+<p style="font-size: 16px; font-weight: bold; margin-top: 20px; color: #1A365D;">الفصل 5: الرؤية والرسالة والقيم</p>
+<p style="font-size: 15px; line-height: 1.8; margin-right: 15px;">صياغة الإطار الفلسفي والمرجعي الحاكم للعمل الثقافي بالأمانة الثقافية بما يضمن التزام كافة اللجان والروابط بهوية بصرية موحدة تعبرعن الوجدان الثقافي السوداني الأصيل .</p>
+
+<p style="font-size: 16px; font-weight: bold; margin-top: 20px; color: #1A365D;">الفصل 6: الركائز التوجيهية الست ومساراتها التنفيذية</p>
+<p style="font-size: 15px; line-height: 1.8; margin-right: 15px;">يمثل هذا الفصل العصب العملي للخطة حيث يحدد الأعمدة الستة التي يستند عليها البناء الهيكلي (الهوية، المعرفة – الإبداع – الشباب – الشراكات - التحول الرقمي) ويترجمها مباشرة إلى محاور ومسارات تطبيقية على أرض الواقع كالتالي:</p>
+
+<div style="margin-right: 20px;">
+    <p style="font-size: 15px; font-weight: bold; margin-top: 10px;">§ أولاً: محور الهوية والتراث (المسار التنفيذي للمعارض الفنية والتراثية):</p>
+    <p style="font-size: 15px; margin-right: 15px;">§ المهرجانات التراثية :إقامة ملتقيات تراثية في مساحات وقاعات مغلقة تشمل عروضاً للفرق الموسيقية التراثية والرقص الشعبي الممثل لكافة أقاليم السودان، لتقديم لوحة وطنية متكاملة تبرز التنوع كعنصر وحدة.</p>
+    <p style="font-size: 15px; margin-right: 15px;">§ أسواق الحرف اليدوية والطهي : تنظيم أسواق ومعارض مصاحبة للحرف اليدوية السودانية والمشغولات الجلدية والخزف، يصاحبها استعراض حي للمأكولات التقليدية لربط الوجدان والأسرة بالثقافة المحلية .</p>
+    <p style="font-size: 15px; margin-right: 15px;">§ ورش العمل التعليمية للتقاليد: تنظيم ورش سريعة وموجهة للأطفال تسلط الضوء على عادات وتقاليد المجتمع السوداني في المناسبات والأعياد لترسيخ قيم التكافل الأصيلة.</p>
     
-    <div style='padding-right: 15px; border-right: 3px solid #C5A059;'>
-        <p style='font-weight: 700; color: #1A365D; margin-top: 15px; font-size: 16px;'>▪️ أولاً: محور الهوية والتراث (المسار التنفيذي للمعارض الفنية والتراثية):</p>
-        <p style='margin-bottom: 8px; padding-right: 15px;'>• <b>المهرجانات التراثية :</b> إقامة ملتقيات تراثية في مساحات وقاعات مغلقة تشمل عروضاً للفرق الموسيقية التراثية والرقص الشعبي الممثل لكافة أقاليم السودان، لتقديم لوحة وطنية متكاملة تبرز التنوع كعنصر وحدة.</p>
-        <p style='margin-bottom: 8px; padding-right: 15px;'>• <b>أسواق الحرف اليدوية والطهي :</b> تنظيم أسواق ومعارض مصاحبة للحرف اليدوية السودانية والمشغولات الجلدية والخزف، يصاحبها استعراض حي للمأكولات التقليدية لربط الوجدان والأسرة بالثقافة المحلية .</p>
-        <p style='margin-bottom: 8px; padding-right: 15px;'>• <b>ورش العمل التعليمية للتقاليد :</b> تنظيم ورش سريعة وموجهة للأطفال تسلط الضوء على عادات وتقاليد المجتمع السوداني في المناسبات والأعياد لترسيخ قيم التكافل الأصيلة.</p>
-        
-        <p style='font-weight: 700; color: #1A365D; margin-top: 20px; font-size: 16px;'>▪️ ثانياً: محور المعرفة والتعليم:</p>
-        <p style='margin-bottom: 8px; padding-right: 15px;'>• <b>ورش صقل المعارف :</b> بناء القدرات الحقيقية ونقل الخبرات المهنية والعملية لتأهيل الكوادر والشباب والخريجين وتوجيه طاقاتهم المعرفية .</p>
-        <p style='margin-bottom: 8px; padding-right: 15px;'>• <b>جلسات النقاش المستمرة :</b> عقد محاضرات دورية مستمرة تستضيف قادة الرأي والفكر لمناقشة آليات تطوير العمل العام وتوفيق أوضاع الكيانات وتوطيد العلاقات الاجتماعية الإيجابية.</p>
-        
-        <p style='font-weight: 700; color: #1A365D; margin-top: 20px; font-size: 16px;'>▪️ ثالثاً: محور الإبداع والفنون (المسار التنفيذي للندوات واللقاءات الحوارية):</p>
-        <p style='margin-bottom: 8px; padding-right: 15px;'>• <b>المسابقات الأدبية :</b> إطلاق مسابقات رسمية في مجالات كتابة وتأليف المقالات والقصص القصيرة والرواية والشعر لتشجيع الإبداع وحصر الطاقات الأدبية في المهجر.</p>
-        <p style='margin-bottom: 8px; padding-right: 15px;'>• <b>المناشط الفنية والتشكيلية :</b> تنظيم معارض ومعاهد متخصصة لتعليم وصقل المعارف الفنية في مجالات الرسم والتصوير الفوتوغرافي والفنون البصرية والخط العربي مع إقامة معارض دورية لعرض أعمال المبدعين السودانيين بجدة.</p>
-        <p style='margin-bottom: 8px; padding-right: 15px;'>• <b>صالون القراءة والكتاب :</b> تنظيم صالونات دورية للقراءة وزيارة وتنظيم معارض مصغرة للكتاب، لتشجيع القراءة ونشر الوعي الثقافي بين الأسر والشباب.</p>
-        
-        <p style='font-weight: 700; color: #1A365D; margin-top: 20px; font-size: 16px;'>▪️ رابعاً: محور الشمولية الثقافية وتكامل الروابط:</p>
-        <p style='margin-bottom: 8px; padding-right: 15px;'>• ضمان التمثيل العادل والمتوازن لكافة مكونات النسيج الاجتماعي والثقافي السوداني بكافة أقاليمه وجغرافيته المتنوعة، لتعزيز فكرة الوحدة من خلال التنوع وتفعيل دور الروابط كشركاء أساسيين .</p>
-        
-        <p style='font-weight: 700; color: #1A365D; margin-top: 20px; font-size: 16px;'>▪️ خامساً: محور الحراك الثقافي المجتمعي:</p>
-        <p style='margin-bottom: 8px; padding-right: 15px;'>• تخصيص أيام ترفيهية ومعرفية دورية وممنهجة ومبادرات متنقلة للأطفال والناشئة في مختلف النطاقات الجغرافية وتشمل مسرح الطفل، الألعاب التعليمية والمسابقات الثقافية لتعزيز الانتماء للوطن بحماية الهوية وغرس القيم بأساليب محببة وجاذبة.</p>
-        
-        <p style='font-weight: 700; color: #1A365D; margin-top: 20px; font-size: 16px;'>▪️ سادساً: منصة "مَجَرَّة" للكفاءات (المشروع المعرفي الأساسي للشباب):</p>
-        <p style='margin-bottom: 8px; padding-right: 15px;'>• حاضنة معرفية وتنموية رائدة ومبتكرة، تم تصميمها خصيصاً لتكون الفضاء الذي يلتقي فيه العلماء، الخبراء والرواد وعموم أصحاب الكفاءات العالية من أبناء الوطن في المهجر بالمنطقة الغربية.</p>
-        <p style='margin-bottom: 8px; padding-right: 15px;'>• يُجهّز مسرح القاعة بأحدث التقنيات البصرية والصوتية المناسبة للعروض التقديمية الاحترافية والملهمة.</p>
-        <p style='margin-bottom: 8px; padding-right: 15px;'>• <b>المتحدثون والعلماء :</b> يتم استضافة شخصيات من أرفع الكفاءات السودانية بالمنطقة الغربية (في مجالات: الأكاديمية - الهندسة - التقنية - الطب - الإدارة - وريادة الأعمال).</p>
-        <p style='margin-bottom: 8px; padding-right: 15px;'>• <b>ضوابط المنصة الزمنية :</b> يُمنح كل متحدث دقائق محددة وصارمة، يستعرض فيها "خلاصة تجربته المهنية والعلمية" ويقدم حلولاً وتوصيات عملية للشباب والخريجين بعيداً عن السرد الإنشائي التقليدي.</p>
-        <p style='margin-bottom: 8px; padding-right: 15px;'>• <b>المعرض المهني المصاحب :</b> على هامش المنصة يُقام معرض متكامل لرواد الأعمال الشباب وأصحاب المشاريع والابتكارات والمهن الحرة لتبادل بطاقات العمل والتطوير المعرفي لترسيخ دور الجالية كحاضنة اقتصادية ومعرفية.</p>
-    </div>
-</div>
-""", unsafe_allow_html=True)
-
-# الفصل 7
-st.markdown("<h2 class='section-title'>الفصل 7: التحول الرقمي والأرشفة الثقافية</h2>", unsafe_allow_html=True)
-st.markdown("""
-<div class='luxury-card'>
-    <p style='font-size: 16px; line-height: 1.8;'>بناء وتصميم "المكتبة الرقمية السودانية" والأرشيف الرقمي الثقافي لحفظ الأعمال الأدبية والندوات والتاريخ السوداني رقمياً وفق أحدث النظم التقنية.</p>
-</div>
-""", unsafe_allow_html=True)
-
-# الفصل 8
-st.markdown("<h2 class='section-title'>الفصل 8: الشراكات والتعاونيات والرعايات</h2>", unsafe_allow_html=True)
-st.markdown("""
-<div class='luxury-card'>
-    <p style='font-size: 16px; line-height: 1.8;'>بناء وتطوير برامج توأمة وشراكات تعاونية مع المؤسسات والروابط الثقافية المحلية، وجذب الرعاة والداعمين لدعم استدامة الأنشطة مالياً ومؤسسياً.</p>
-</div>
-""", unsafe_allow_html=True)
-
-# الفصل 9
-st.markdown("<h2 class='section-title'>الفصل 9: الإعلام الثقافي وإدارة المحتوى</h2>", unsafe_allow_html=True)
-st.markdown("""
-<div class='luxury-card'>
-    <p style='font-size: 16px; line-height: 1.8;'>تصميم خطة تسويق ثقافي متكاملة، وإدارة صناعة المحتوى على المنصات الرقمية لتعكس الأنشطة باحترافية، وتبرز الوجه المشرق للمجتمع السوداني بجدة.</p>
-</div>
-""", unsafe_allow_html=True)
-
-# الفصل 10
-st.markdown("<h2 class='section-title'>الفصل 10: الخطة التشغيلية السنوية</h2>", unsafe_allow_html=True)
-st.markdown("""
-<div class='luxury-card'>
-    <p style='font-size: 16px; line-height: 1.8;'>تحويل الرؤى النظرية إلى جداول زمنية محددة التواريخ، وتوزيع المهام التنفيذية والبرامج على مدار العام لتأمين سلاسة الأداء وسهولة الرقابة.</p>
-</div>
-""", unsafe_allow_html=True)
-
-# الفصل 11
-st.markdown("<h2 class='section-title'>الفصل 11: الميزانية التقديرية والحوكمة المالية</h2>", unsafe_allow_html=True)
-st.markdown("""
-<div class='luxury-card'>
-    <p style='font-size: 16px; line-height: 1.8;'>تفصيل التدفقات المالية والميزانيات التقديرية المطلوبة لكل حزمة مشروعات، مقرونة بضوابط الحوكمة والشفافية المالية المعتمدة لدى لجنة التسيير.</p>
-</div>
-""", unsafe_allow_html=True)
-
-# ملاحق الحوكمة
-st.markdown("<h2 class='section-title'>ملاحق الحوكمة والضبط الإداري (بروتوكول الاستدامة والمرجعية):</h2>", unsafe_allow_html=True)
-st.markdown("""
-<div class='luxury-card'>
-    <p style='font-size: 16px; line-height: 1.8; font-weight: 600; margin-bottom: 15px;'>لضمان جودة الأداء وتحقيق المخرجات المستهدفة، ولتأمين ديمومة هذه الوثيقة كإرث مؤسسي للجاليات القادمة، تخضع الخطة لمنظومة الحوكمة التالية:</p>
-    <p style='font-size: 16px; line-height: 1.8; margin-bottom: 10px;'><b>1. بروتوكول التسليم والديمومة المؤسسية (الاستمرارية):</b> تُعتمد هذه الخطة كأصل وثائقي أساسي للأمانة الثقافية في "لجنة تيسسر الجالية السودانية بجدة مايو2026 " وتلتزم الامانة الحالية بتسليم كافة ملفاتها التقنية والبيانات المستخرجة من المنصات الرقمية (مثل منصة مجرة والمكتبة الرقمية) إلى رئيس لجنة التسيير، لتبدأ الإدارات المتعاقبة من حيث انتهت هذه الخطة دون الحاجة لتأسيس حراك ثقافي من الصفر.</p>
-    <p style='font-size: 16px; line-height: 1.8; margin-bottom: 10px;'><b>2. بطاقة العضوية الثقافية (المتابعة وقياس الأثر):</b> إصدار بطاقات حضور رمزية تسلسلية للمشاركين تسهم في قياس مدى التزام وتفاعل العضوية وتمنح ميزات تفضيلية للملتزمين بالمسارات التدريبية في الفعاليات الختامية.</p>
-    <p style='font-size: 16px; line-height: 1.8; margin-bottom: 10px;'><b>3. صندوق "صوت المواطن" للشفافية:</b> تفعيل صندوق مقترحات رسمي وموثق يتنقل بين كافة المشروعات والفعاليات الحصرية، ويتيح لأبناء الجالية تقديم أفكارهم ورؤاهم المكتوبة مباشرة إلى لجنة التسيير، إيماناً بمبدأ الشفافية والمشاركة الجماعية في صنع القرار.</p>
-    <p style='font-size: 16px; line-height: 1.8;'><b>4. الحوكمة والتنفيذ المؤسسي:</b> تخضع كافة الفعاليات والمشروعات لإشراف مباشر من الأمانة الثقافية بلجنة التسيير، وبالتنسيق الكامل والمنظم مع رئيس واعضاء لجنة التسيير والقنصلية العامة لجمهورية السودان بجدة لضمان الالتزام المطلق بالضوابط والأنظمة المتبعة في الدولة المضيفة.</p>
-</div>
-""", unsafe_allow_html=True)
-
-# -------------------------------------------------------------
-# الخاتمة والتوصيات والتواقيع الاحترافية (معزولة بالكامل لحل مشكلة المحاذاة)
-# -------------------------------------------------------------
-st.markdown("<h2 class='section-title'>الخاتمة والتوصيات:</h2>", unsafe_allow_html=True)
-st.markdown("""
-<div class='luxury-card' style='border-right-color: #C5A059;'>
-    <p style='font-size: 16px; line-height: 1.8;'>إن هذه الخطة الثقافية الشاملة بمساراتها الواضحة ومستهدفاتها المدروسة وآليات تنفيذها الملموسة وبروتوكول استدامتها الإدارية، تمثل الركيزة الأساسية واللبنة الأولى لصياغة مستقبل جالية نموذجية، متلاحمة، ورائدة.</p>
-    <p style='font-size: 16px; line-height: 1.8;'>نضع هذا المشروع الهيكلي والمرجعي أمام سعادتكم للتفضل بالاطلاع والمناقشة، توطئةً لإجازته واعتماده لبدء التنفيذ الميداني الفوري وحفظه كإرث تنظيمي دائم.</p>
-    <br>
-    <p style='text-align: center !important; font-weight: bold; font-size: 18px; color: #1A365D;'>سائلين الله العلي القدير أن يوفقنا جميعاً لما فيه خير العباد والبلاد</p>
-    <p style='text-align: center !important; font-weight: bold; font-size: 18px; color: #C5A059;'>،، وتفضلوا بقبول وافر الشكر والتقدير والامتنان ،،</p>
-</div>
-""", unsafe_allow_html=True)
-
-# استدعاء مكون HTML الخارجي والمعزول تماماً لمنع Streamlit من تشتيت الأسماء لليسار
-html_signatures_final = """
-<div style="font-family: 'Cairo', sans-serif; direction: rtl; text-align: center; width: 100%; padding-top: 15px;">
+    <p style="font-size: 15px; font-weight: bold; margin-top: 15px;">§ ثانياً: محور المعرفة والتعليم:</p>
+    <p style="font-size: 15px; margin-right: 15px;">§ ورش صقل المعارف: بناء القدرات الحقيقية ونقل الخبرات المهنية والعملية لتأهيل الكوادر والشباب والخريجين وتوجيه طاقاتهم المعرفية .</p>
+    <p style="font-size: 15px; margin-right: 15px;">§ جلسات النقاش المستمرة: عقد محاضرات دورية مستمرة تستضيف قادة الرأي والفكر لمناقشة آليات تطوير العمل العام وتوفيق أوضاع الكيانات وتوطيد العلاقات الاجتماعية الإيجابية.</p>
     
-    <!-- اسم الجهة ممركز بالكامل في المنتصف -->
-    <p style="font-size: 20px; font-weight: 800; color: #1A365D; margin-bottom: 30px;">أمانة الثقافة بلجنة تسيير الجالية السودانية بجدة مايو 2026</p>
+    <p style="font-size: 15px; font-weight: bold; margin-top: 15px;">§ ثالثاً: محور الإبداع والفنون (المسار التنفيذي للندوات واللقاءات الحوارية):</p>
+    <p style="font-size: 15px; margin-right: 15px;">§ المسابقات الأدبية : إطلاق مسابقات رسمية في مجالات كتابة وتأليف المقالات والقصص القصيرة والرواية والشعر لتشجيع الإبداع وحصر الطاقات الأدبية في المهجر.</p>
+    <p style="font-size: 15px; margin-right: 15px;">§ المناشط الفنية والتشكيلية: تنظيم معارض ومعاهد متخصصة لتعليم وصقل المعارف الفنية في مجالات الرسم والتصوير الفوتوغرافي والفنون البصرية والخط العربي مع إقامة معارض دورية لعرض أعمال المبدعين السودانيين بجدة.</p>
+    <p style="font-size: 15px; margin-right: 15px;">§ صالون القراءة والكتاب : تنظيم صالونات دورية للقراءة وزيارة وتنظيم معارض مصغرة للكتاب، لتشجيع القراءة ونشر الوعي الثقافي بين الأسر والشباب.</p>
     
-    <!-- جدول شفاف لتثبيت الأسماء على سطر واحد وبمحاذاة كاملة السنترة -->
+    <p style="font-size: 15px; font-weight: bold; margin-top: 15px;">§ رابعاً: محور الشمولية الثقافية وتكامل الروابط:</p>
+    <p style="font-size: 15px; margin-right: 15px;">§ ضمان التمثيل العادل والمتوازن لكافة مكونات النسيج الاجتماعي والثقافي السوداني بكافة أقاليمه وجغرافيته المتنوعة، لتعزيز فكرة الوحدة من خلال التنوع وتفعيل دور الروابط كشركاء أساسيين .</p>
+    
+    <p style="font-size: 15px; font-weight: bold; margin-top: 15px;">§ خامساً: محور الحراك الثقافي المجتمعي:</p>
+    <p style="font-size: 15px; margin-right: 15px;">§ تخصيص أيام ترفيهية ومعرفية دورية وممنهجة ومبادرات متنقلة للأطفال والناشئة في مختلف النطاقات الجغرافية وتشمل مسرح الطفل، الألعاب التعليمية والمسابقات الثقافية لتعزيز الانتماء للوطن بحماية الهوية وغرس القيم بأساليب محببة وجاذبة.</p>
+    
+    <p style="font-size: 15px; font-weight: bold; margin-top: 15px;">§ سادساً: منصة "مَجَرَّة" للكفاءات (المشروع المعرفي الأساسي للشباب):</p>
+    <p style="font-size: 15px; margin-right: 15px;">حاضنة معرفية وتنموية رائدة ومبتكرة، تم تصميمها خصيصاً لتكون الفضاء الذي يلتقي فيه العلماء، الخبراء والرواد وعموم أصحاب الكفاءات العالية من أبناء الوطن في المهجر بالمنطقة الغربية.</p>
+    <p style="font-size: 15px; margin-right: 15px;">§ يُجهّز مسرح القاعة بأحدث التقنيات البصرية والصوتية المناسبة للعروض التقديمية الاحترافية والملهمة.</p>
+    <p style="font-size: 15px; margin-right: 15px;">§ المتحدثون والعلماء : يتم استضافة شخصيات من أرفع الكفاءات السودانية بالمنطقة الغربية (في مجالات: الأكاديمية - الهندسة - التقنية - الطب - الإدارة - وريادة الأعمال).</p>
+    <p style="font-size: 15px; margin-right: 15px;">§ ضوابط المنصة الزمنية: يُمنح كل متحدث دقائق محددة وصارمة، يستعرض فيها "خلاصة تجربته المهنية والعلمية" ويقدم حلولاً وتوصيات عملية للشباب والخريجين بعيداً عن السرد الإنشائي التقليدي.</p>
+    <p style="font-size: 15px; margin-right: 15px;">§ المعرض المهني المصاحب: على هامش المنصة يُقام معرض متكامل لرواد الأعمال الشباب وأصحاب المشاريع والابتكارات والمهن الحرة لتبادل بطاقات العمل والتطوير المعرفي لترسيخ دور الجالية كحاضنة اقتصادية ومعرفية.</p>
+</div>
+
+<p style="font-size: 16px; font-weight: bold; margin-top: 20px; color: #1A365D;">الفصل 7: التحول الرقمي والأرشفة الثقافية</p>
+<p style="font-size: 15px; line-height: 1.8; margin-right: 15px;">بناء وتصميم "المكتبة الرقمية السودانية" والأرشيف الرقمي الثقافي لحفظ الأعمال الأدبية والندوات والتاريخ السوداني رقمياً وفق أحدث النظم التقنية.</p>
+
+<p style="font-size: 16px; font-weight: bold; margin-top: 20px; color: #1A365D;">الفصل 8: الشراكات والتعاونيات والرعايات</p>
+<p style="font-size: 15px; line-height: 1.8; margin-right: 15px;">بناء وتطوير برامج توأمة وشراكات تعاونية مع المؤسسات والروابط الثقافية المحلية، وجذب الرعاة والداعمين لدعم استدامة الأنشطة مالياً ومؤسسياً.</p>
+
+<p style="font-size: 16px; font-weight: bold; margin-top: 20px; color: #1A365D;">الفصل 9: الإعلام الثقافي وإدارة المحتوى</p>
+<p style="font-size: 15px; line-height: 1.8; margin-right: 15px;">تصميم خطة تسويق ثقافي متكاملة، وإدارة صناعة المحتوى على المنصات الرقمية لتعكس الأنشطة باحترافية، وتبرز الوجه المشرق للمجتمع السوداني بجدة.</p>
+
+<p style="font-size: 16px; font-weight: bold; margin-top: 20px; color: #1A365D;">الفصل 10: الخطة التشغيلية السنوية</p>
+<p style="font-size: 15px; line-height: 1.8; margin-right: 15px;">تحويل الرؤى النظرية إلى جداول زمنية محددة التواريخ، وتوزيع المهام التنفيذية والبرامج على مدار العام لتأمين سلاسة الأداء وسهولة الرقابة.</p>
+
+<p style="font-size: 16px; font-weight: bold; margin-top: 20px; color: #1A365D;">الفصل 11: الميزانية التقديرية والحوكمة المالية</p>
+<p style="font-size: 15px; line-height: 1.8; margin-right: 15px;">تفصيل التدفقات المالية والميزانيات التقديرية المطلوبة لكل حزمة مشروعات، مقرونة بضوابط الحوكمة والشفافية المالية المعتمدة لدى لجنة التسيير.</p>
+
+<p style="font-size: 16px; font-weight: bold; margin-top: 20px; color: #1A365D;">ملاحق الحوكمة والضبط الإداري (بروتوكول الاستدامة والمرجعية):</p>
+<p style="font-size: 15px; line-height: 1.8; margin-right: 15px;">لضمان جودة الأداء وتحقيق المخرجات المستهدفة، ولتأمين ديمومة هذه الوثيقة كإرث مؤسسي للجاليات القادمة، تخضع الخطة لمنظومة الحوكمة التالية:</p>
+<p style="font-size: 15px; line-height: 1.8; margin-right: 25px;">1. بروتوكول التسليم والديمومة المؤسسية (الاستمرارية): تُعتمد هذه الخطة كأصل وثائقي أساسي للأمانة الثقافية في "لجنة تيسسر الجالية السودانية بجدة مايو2026 " وتلتزم الامانة الحالية بتسليم كافة ملفاتها التقنية والبيانات المستخرجة من المنصات الرقمية (مثل منصة مجرة والمكتبة الرقمية) إلى رئيس لجنة التسيير، لتبدأ الإدارات المتعاقبة من حيث انتهت هذه الخطة دون الحاجة لتأسيس حراك ثقافي من الصفر.</p>
+<p style="font-size: 15px; line-height: 1.8; margin-right: 25px;">2. بطاقة العضوية الثقافية (المتابعة وقياس الأثر): إصدار بطاقات حضور رمزية تسلسلية للمشاركين تسهم في قياس مدى التزام وتفاعل العضوية وتمنح ميزات تفضيلية للملتزمين بالمسارات التدريبية في الفعاليات الختامية.</p>
+<p style="font-size: 15px; line-height: 1.8; margin-right: 25px;">3. صندوق "صوت المواطن" للشفافية: تفعيل صندوق مقترحات رسمي وموثق يتنقل بين كافة المشروعات والفعاليات الحصرية، ويتيح لأبناء الجالية تقديم أفكارهم ورؤاهم المكتوبة مباشرة إلى لجنة التسيير، إيماناً بمبدأ الشفافية والمشاركة الجماعية في صنع القرار.</p>
+<p style="font-size: 15px; line-height: 1.8; margin-right: 25px;">4. الحوكمة والتنفيذ المؤسسي: تخضع كافة الفعاليات والمشروعات لإشراف مباشر من الأمانة الثقافية بلجنة التسيير، وبالتنسيق الكامل والمنظم مع رئيس واعضاء لجنة التسيير والقنصلية العامة لجمهورية السودان بجدة لضمان الالتزام المطلق بالضوابط والأنظمة المتبعة في الدولة المضيفة.</p>
+
+<p style="font-size: 16px; font-weight: bold; margin-top: 30px; color: #1A365D;">الخاتمة والتوصيات:</p>
+<p style="font-size: 15px; line-height: 1.8; margin-right: 15px;">إن هذه الخطة الثقافية الشاملة بمساراتها الواضحة ومستهدفاتها المدروسة وآليات تنفيذها الملموسة وبروتوكول استدامتها الإدارية، تمثل الركيزة الأساسية واللبنة الأولى لصياغة مستقبل جالية نموذجية، متلاحمة، ورائدة.</p>
+<p style="font-size: 15px; line-height: 1.8; margin-right: 15px;">نضع هذا المشروع الهيكلي والمرجعي أمام سعادتكم للتفضل بالاطلاع والمناقشة، توطئةً لإجازته واعتماده لبدء التنفيذ الميداني الفوري وحفظه كإرث تنظيمي دائم.</p>
+<p style="font-size: 16px; font-weight: bold; margin-top: 15px; text-align: center !important;">سائلين الله العلي القدير أن يوفقنا جميعاً لما فيه خير العباد والبلاد</p>
+
+<br>
+<p style="text-align: center !important; font-weight: bold; font-size: 16px; color: #C5A059;">،، وتفضلوا بقبول وافر الشكر والتقدير والامتنان ،،</p>
+""", unsafe_allow_html=True)
+
+
+# --- قسم التواقيع الاحترافي المعزول والممركز تماماً لحل مشكلة البهدلة والزحف ---
+html_signatures_fixed = """
+<div style="font-family: 'Cairo', sans-serif; direction: rtl; text-align: center; width: 100%; padding-top: 30px;">
+    
+    <!-- اسم الجهة ممركز تماماً في الوسط -->
+    <p style="font-size: 18px; font-weight: bold; color: #1A365D; margin-bottom: 35px; text-align: center;">أمانة الثقافة بلجنة تسيير الجالية السودانية بجدة مايو 2026</p>
+    
+    <!-- جدول حماية لتوزيع الأسماء بالتساوي على سطر واحد وضمان سنترتها ومنع بهدلتها لليسار -->
     <table style="width: 80%; margin: 0 auto; border: none; border-collapse: collapse;">
         <tr>
-            <td style="width: 50%; text-align: center; border: none; padding: 5px;">
-                <p style="font-size: 24px; font-weight: 800; color: #C5A059; margin: 0; white-space: nowrap;">وليد البليل</p>
+            <td style="width: 50%; text-align: center; border: none; padding: 0;">
+                <p style="font-size: 22px; font-weight: bold; color: #C5A059; margin: 0; white-space: nowrap; text-align: center;">وليد البليل</p>
             </td>
-            <td style="width: 50%; text-align: center; border: none; padding: 5px;">
-                <p style="font-size: 24px; font-weight: 800; color: #C5A059; margin: 0; white-space: nowrap;">بابكرعبدالله الصلوعابي</p>
+            <td style="width: 50%; text-align: center; border: none; padding: 0;">
+                <p style="font-size: 22px; font-weight: bold; color: #C5A059; margin: 0; white-space: nowrap; text-align: center;">بابكرعبدالله الصلوعابي</p>
             </td>
         </tr>
     </table>
 </div>
 """
 
-# عرض حاوية التواقيع المعزولة بارق أرشيف إداري نظيف وثابت
-st.components.v1.html(html_signatures_final, height=160, scrolling=False)
+# استدعاء التواقيع بوزن ممركز مستقل لا تكسره إعدادات حاوية Streamlit
+st.components.v1.html(html_signatures_fixed, height=150, scrolling=False)
 
 st.markdown("</div>", unsafe_allow_html=True)
