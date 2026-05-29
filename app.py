@@ -294,10 +294,10 @@ html_signatures = """
     <table style="width: 25%; margin: 0 auto; border: none; border-collapse: collapse;">
         <tr>
             <td style="width: 50%; text-align: center; border: none; padding: 10px;">
-                <p style="font-size: 26px; font-weight: 800; color: #C5A059; margin: 0; white-space: nowrap;">بابكر عبد الله الصلوعابي</p>
+                <p style="font-size: 20px; font-weight: 800; color: #C5A059; margin: 0; white-space: nowrap;">بابكر عبد الله الصلوعابي</p>
             </td>
             <td style="width: 50%; text-align: center; border: none; padding: 10px;">
-                <p style="font-size: 26px; font-weight: 800; color: #C5A059; margin: 0; white-space: nowrap;">وليد البليل</p>
+                <p style="font-size: 20px; font-weight: 800; color: #C5A059; margin: 0; white-space: nowrap;">وليد البليل</p>
             </td>
         </tr>
     </table>
