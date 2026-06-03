@@ -178,7 +178,7 @@ st.markdown("<div class='luxury-card'><p>تأصيل دور الثقافة كرك
 st.markdown("<h2 class='section-title'>الفصل 3 تحليل الواقع الثقافي</h2>", unsafe_allow_html=True)
 st.markdown("<div class='luxury-card'><p>• دراسة وصفية وميدانية دقيقة للوضع الراهن للحراك الثقافي في المنطقة الغربية واستكشاف مكامن الفرص غير المستغلة والوقوف على التحديات الراهنة التي تواجه العمل العام وتذليلها .</p></div>", unsafe_allow_html=True)
 
-st.markdown("<h2 class='section-title'>الفصل 4 تحليل (SWOT) الرباعي</h2>", unsafe_allow_html=True)
+st.markdown("<h2 class='section-title'>الفصل 4: تحليل : نقاط القوة - نقاط الضعف - الفرص - المهددات (SWOT) </h2>", unsafe_allow_html=True)
 st.markdown("<div class='luxury-card'><p>• قراءة علمية تحليلية لواقع العمل الثقافي تحدد بشكل صارم : نقاط القوة لتنميتها، نقاط الضعف لمعالجتها وحوكمتها، الفرص المتاحة لانتهازها، والمهددات الخارجية للتحوط منها وتجنبها .</p></div>", unsafe_allow_html=True)
 
 st.markdown("<h2 class='section-title'>الفصل 5 الرؤية والرسالة والقيم</h2>", unsafe_allow_html=True)
